@@ -1,0 +1,15 @@
+﻿@model Disease
+<div class="card">
+    
+    <div class="card-body">
+      @Model.Name
+        
+    </div>
+    <div class="card-body">
+        @Model.Description
+    </div>
+    <div class="card-footer">
+        @Model.Startdate 
+    </div>
+    <a class="btn btn-danger" asp-action="Edit" asp-controller="Disease" asp-route-id="@Model.Id"> Edytuj</a>
+</div>

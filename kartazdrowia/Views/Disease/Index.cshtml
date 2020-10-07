@@ -1,0 +1,26 @@
+﻿@model List<Disease>
+@{
+    ViewData["Title"] = "Moje choroby";
+}
+
+<div class="text-center">
+    <h2>
+        Choroby
+    </h2>
+    <a class="btn btn-primary" asp-controller="Disease" asp-action="Create"> Dodaj chorobę</a>
+
+    @foreach (var m in Model)
+    {
+          
+            <div class="card" >
+                <div class="card-header">@m.Name</div>
+                <div class="card-body">@m.Description</div>
+                <div class="card-footer"> @m.Startdate</div>
+                <a class="btn btn-secondary" asp-action="Show" asp-controller="Disease" asp-route-id="@m.Id" >
+                    Szczegóły
+                </a>
+            </div>
+            
+        
+    }
+</div>

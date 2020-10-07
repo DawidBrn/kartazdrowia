@@ -1,0 +1,14 @@
+﻿@model Disease
+
+<div class="text-center">
+    <form asp-controller="Disease" asp-action="Save" method="post" asp-route-id="@Model.Id">
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="@Model.Name"/>
+            <textarea class="form-control" name="description">@Model.Description </textarea>
+            <input class="form-control" name="startdate" type="date" value="@Model.Startdate" />
+            
+            <button class="btn btn-secondary" type="submit"> Edytuj chorobe</button>
+        </div>
+
+    </form>
+</div>
